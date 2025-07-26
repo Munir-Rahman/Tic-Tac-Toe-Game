@@ -82,6 +82,7 @@ let newgame = () => {
     for(let box of boxes){
         box.innerText = "";
     }
+    message.innerHTML = "";
     turnO = true;
     count = 0;
     enablebuttons();
