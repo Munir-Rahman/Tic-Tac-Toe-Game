@@ -6,19 +6,25 @@
     <meta name="description" content="Play Free Tic Tac Toe Game online. A Simple and Fun 2-Player game buit with HTML, CSS, JavaScript, No Download Required!" />
     <meta name="keywords" content="tic tac toe, XO game, tic tac toe Online, HTML game, JavaScript Game, 2 Player Game, Fun Game, Play tic tac toe" />
     <meta name="author" content="Munir Rahman"/>
+    <link rel="icon" href="icon/icon.jpg">
     <!-- Open Graph For Social Media Sharing -->
     <meta property="og:title" content="Tic Tac Toe Play Online" />
+    <meta property="og:image" content="icon/icon.jpg">
     <meta property="og:description" content="A Fun online XO game made using HTML CSS & JS.No sign-up required!"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div class="msg-container hide">
-        <p id="message"></p>
-        <button id="new-btn">New Game</button>
-    </div>
     <main>
         <h2>Tic Tac Toe</h2>
+        <div class="result">
+            <div class="o-winner">
+                <span id="xresult">X : <span id="x-num">0</span></span>
+            </div>
+            <div class="x-winner">
+                <span id="oresult">O : <span id="o-num">0</span></span>
+            </div>
+        </div>
         <div class="container">
             <div class="game">
                 <button class="box"></button>
@@ -32,7 +38,11 @@
                 <button class="box"></button>
             </div>
         </div>
+        <div class="msg-container">
+        <p id="message"></p>
+        <button id="new-btn">New Game</button>
         <button id="rst-btn">Reset Game</button>
+    </div>
     </main>
     <script src="js/main.js"></script>
 </body>

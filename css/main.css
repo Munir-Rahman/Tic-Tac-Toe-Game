@@ -12,6 +12,10 @@ body{
     color: #e894ea;
     text-align: center;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
 h2{
     font-size: 3rem;
     color: #e8ccdcd8;
@@ -43,6 +47,7 @@ h2{
     text-align: center;
 }
 #rst-btn{
+    width: 10rem;
     font-size: 1.25rem;
     padding: 1rem;
     color: #ffffff;
@@ -69,12 +74,12 @@ h2{
 }
 
 .msg-container{
-    height: 100vmin;
+    height: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 4rem;
+    gap: 0.5rem;
 }
 #message {
     color: #ffffc7;

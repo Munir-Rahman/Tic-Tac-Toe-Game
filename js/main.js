@@ -2,9 +2,15 @@ let boxes = document.querySelectorAll(".box");
 let msgContainer = document.querySelector(".hide");
 let resetbtn = document.getElementById("rst-btn");
 let newgamebtn = document.getElementById("new-btn");
+let xresultbox = document.getElementById("xresult");
+let oresult = document.getElementById("oresult");
+let o_num = document.getElementById("o-num");
+let x_num = document.getElementById("x-num");
 let message = document.getElementById("message");
 let turnX = true; //PLayer X and Player O
 let count = 0; //To Find Game Draw
+let X_count = 0;
+let O_count = 0;
 
 const patterns = [
     [0, 1, 2],
@@ -62,6 +68,11 @@ let resetgame = () => {
     }
     turnO = true;
     count = 0;
+    X_count = 0;
+    x_num.innerHTML =  X_count
+    O_count = 0;
+    o_num.innerHTML = O_count;
+    message.innerHTML = "";
     enablebuttons();
     msgContainer.classList.add("hide");
 }
@@ -79,6 +90,14 @@ let newgame = () => {
 
 //Show Winner
 let showWinner = (winner) => {
+    if(winner === 'X'){
+        X_count++;
+        x_num.innerHTML = X_count;
+    } else if(winner === 'O'){
+        O_count++;
+        o_num.innerHTML = O_count;
+    }
+
     message.innerText = `Congratulations Winner is ${winner}`;
     msgContainer.classList.remove("hide");
     disablebtns();
