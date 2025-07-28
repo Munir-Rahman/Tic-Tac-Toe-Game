@@ -1,5 +1,4 @@
 let boxes = document.querySelectorAll(".box");
-let msgContainer = document.querySelector(".hide");
 let resetbtn = document.getElementById("rst-btn");
 let newgamebtn = document.getElementById("new-btn");
 let xresultbox = document.getElementById("xresult");
@@ -35,7 +34,6 @@ boxes.forEach((box) => {
         let iswinner = checkWinner();
         count++;
         if(count === 9 && !iswinner){
-            msgContainer.classList.remove("hide");
             gameDraw();
         } 
     });
@@ -74,7 +72,6 @@ let resetgame = () => {
     o_num.innerHTML = O_count;
     message.innerHTML = "";
     enablebuttons();
-    msgContainer.classList.add("hide");
 }
 
 //New Game
@@ -86,7 +83,6 @@ let newgame = () => {
     turnO = true;
     count = 0;
     enablebuttons();
-    msgContainer.classList.add("hide");
 }
 
 //Show Winner
@@ -100,7 +96,6 @@ let showWinner = (winner) => {
     }
 
     message.innerText = `Congratulations Winner is ${winner}`;
-    msgContainer.classList.remove("hide");
     disablebtns();
 }
 
